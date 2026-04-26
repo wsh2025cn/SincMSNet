@@ -123,7 +123,7 @@ def cv(datasetId = None, network = None, nGPU = None, subTorun=None,centerLossEn
     
     # Output folder:
     # Lets store all the outputs of the given run in folder.
-    config['outPath'] = os.path.join(toolboxPath, 'output')
+    config['outPath'] = '/content/drive/MyDrive/SincMSNet_Output/'
     config['outPath'] = os.path.join(config['outPath'], datasets[datasetId], 'cv')
 
     # Network initialization:
@@ -495,4 +495,4 @@ if __name__ == '__main__':
     #             41,42,43,44,45,
     #             46,47,48,49,50,
     #             51,52,53]
-    cv(datasetId=1, network='FBMCNetLogVarCLReLU', nGPU='0', subTorun=subTorun, centerLossEnable=False)
+    cv(datasetId=datasetId, network=network, nGPU=nGPU, subTorun=subTorun, centerLossEnable=True)
