@@ -566,7 +566,7 @@ class baseModel():
                     feats = feats.reshape(len(d['data']),-1).data.detach().cpu()
 
                     title = "-tsne-" + self.net._get_name()
-                    filepath = 'E:/tsne/' + title
+                    filepath = os.path.join(self.resultsSavePath, title)
                     from pandas import DataFrame
 
                     f_embedded = TSNE(n_components=2,random_state=19981127).fit_transform(feats.data.detach().cpu())
