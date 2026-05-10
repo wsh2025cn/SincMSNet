@@ -105,7 +105,7 @@ def ho(datasetId = None, network = None, nGPU = None, subTorun=None, centerLossE
 
     # Output folder:
     # Lets store all the outputs of the given run in folder.
-    config['outPath'] = '/content/drive/MyDrive/SincMSNet_Output'
+    config['outPath'] = '/kaggle/working/SincMSNet_Output'
     config['outPath'] = os.path.join(config['outPath'], datasets[datasetId], 'ses2Test')
 
     # Network initialization:
